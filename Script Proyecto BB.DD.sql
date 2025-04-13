@@ -208,12 +208,8 @@ ORDER BY "mes";
 pagado.*/
 
 -- El promedio --
-
-WITH "total_pagado" AS 
-	(SELECT sum("amount") AS "total"
-	 FROM "payment") 
-SELECT AVG("total") AS "promedio"
-FROM "total_pagado";
+SELECT AVG("amount") AS "promedio"
+FROM "payment";
 
 -- La desviación Estándar --	
 	
